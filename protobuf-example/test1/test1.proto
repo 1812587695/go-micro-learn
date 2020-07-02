@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+
+// 生成go命令：protoc --go_out=. *.proto
+
+option go_package = ".;protoes";   //不添加这行生成go文件会报错
+
+
+//发送消息
+message TestRequest {
+//姓名
+  string name = 1;
+  //年龄
+  int32 age = 22;
+  //身高
+  int32 height= 160;
+}
+
+// 返回消息
+message testResponse {
+  int32 error = 1;
+  string ermessage = 2;
+}
+
+
+
